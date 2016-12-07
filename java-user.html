@@ -1,0 +1,29 @@
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+<script src="j-user.js"></script>
+
+<style>
+.input-text {color: #898989; padding: 0 5% 0 5%; }
+.fs-shaded {border-style: solid; border-color: red; border-width: 1px; margin: 5px 10% 5px 10%; text-align: center center;}
+.padded {padding: 5px 5% 5px 5%;}
+.button-margin {margin: 2px 2px 2px 2px;}
+</style>
+
+<h1 class="text-primary text-center"><br>Add Users Page</h1>
+<br><br>
+
+<div class="container-fluid text-center">
+	
+	<div class="row padded"><a class="col-xs-4">User name:</a> <input class="col-xs-4 input-text" type="text" id="userName" placeholder="Enter name"></div>
+	<div class="row padded"><a class="col-xs-4">User password:</a><input class="col-xs-4 input-text" type="password" id="userPasswd" placeholder="Enter password" onkeydown="returnCheckPwd(this.value)"></input>
+		<a class="col-xs-4" id="pwdStatus">Password Status</a></div>
+	<div class="row padded"><a class="col-xs-4">User email:</a><input class="col-xs-4 input-text" type="text" id="userEmail" placeholder="Enter email"></input>
+		<p class="col-xs-4" id="formStatus">Status</p></div>
+	<input type="button" class="btn btn-primary" id="addUser" value="Add User" onClick="addUser(document.getElementById('userName').value,document.getElementById('userPasswd').value,document.getElementById('userEmail').value)"></input>
+	<input type="button" class="btn btn-primary" id="listUser" value="List Users" onClick="listUsers()"></input>
+	<br><br><br>
+	<h3>Users list</h3>
+	<br>
+	<p id="userList"></p>
+	
+</div>
